@@ -4,19 +4,21 @@
     <br>
     <form id="maidSearchForm" action="./components/__maidSearcher.php" method="POST">
       <div class="form-row">
-        <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 offset-lg-1">
+        <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-3 offset-lg-1">
           <label for="findLocation">Where do you live?</label>
-          <select id="findLocation" class="form-control selectpicker" data-style="btn-light">
-            <option value="" disabled selected>Choose</option>
-            <option value="Malabe"> Malabe</option>
-            <option value="Colombo"> Colombo</option>
-            <option value="Kotahena"> Kotahena</option>
-            <option value="Wellawatta"> Wellawatta</option>
+          <select id="findLocation" class="form-control selectpicker" data-style="btn-light" name="findLocation" required>
+            <option value="Wellawatta">Wellawatta</option>
+            <option value="Hatton">Hatton</option>
+            <option value="Kandy">Kandy</option>
+            <option value="Dehiwala">Dehiwala</option>
+            <option value="Moratuwa">Moratuwa</option>
+            <option value="Panadura">Panadura</option>
+            <option value="Kotahena">Kotahena</option>
           </select>
         </div>
-        <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4">
-          <label for="findSkills">Skills</label>
-          <select id="findSkills" class="form-control selectpicker" name="findSkills" data-style="btn-light" multiple>
+        <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-5">
+          <label for="findSkills">What tasks do you need done?</label>
+          <select id="findSkills" class="form-control selectpicker" name="findSkills[]" data-style="btn-light" multiple required>
             <option value="cooking">Cooking</option>
             <option value="cleaning">Cleaning</option>
             <option value="washing">Washing</option>

@@ -1,7 +1,19 @@
 <?php
 require_once('__connect_db.php');
 
+$location = mysqli_real_escape_string($con, $_POST['findLocation']);
+$tasks = $_POST['findSkills'];
 
+echo "<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-3 mb-3'>";
+echo "location: $location <br><br>";
+echo "tasks: <pre>";
+print_r($tasks);
+echo "</pre>";
+echo "</div><br><br>";
+
+
+
+/* SEARCH BUTTON TESTING W/ STATIC OUTPUT
 $images = array("default.png","1.jpg","2.jpg","3.jpg");
 for ($i=0; $i<10; $i++) {
   $temp = rand(0,3);
@@ -16,6 +28,7 @@ for ($i=0; $i<10; $i++) {
   echo "</div>";
   echo "</div> <!-- Columns -->";
 }
+*/
 
 mysqli_close($con);
 ?>
