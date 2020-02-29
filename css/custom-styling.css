@@ -1,0 +1,97 @@
+.container {
+  background-color: #fff;
+}
+
+.text-orange {
+  color: #fd7e14 !important;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  position: absolute !important;
+  right: 0px !important;
+}
+
+#headerCarouselBox {
+  background-color: #4c4c4c !important;
+}
+
+.headerContentBox-Inner {
+  padding-top: 3rem;
+}
+
+@media (max-width: 576px) {
+  .headerContentBox-Inner {
+    padding-top: 1.2rem;
+  }
+}
+
+.headerContentBox-Outer {
+  margin-top: 3rem;
+}
+
+@media (max-width: 576px) {
+  .headerContentBox-Outer {
+    margin-top: 2rem;
+  }
+}
+
+.headerPaddingSponge {
+  display: block;
+  padding-top: 5rem;
+}
+
+@media (max-width: 576px) {
+  .headerPaddingSponge {
+    padding-top: 1.2rem;
+  }
+}
+
+.mainPage {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.bodySection {
+  padding-top: 5rem;
+}
+
+.bodyStartSection {
+  padding-top: 2rem;
+}
+
+.formResult {
+  padding: 0.5rem 1rem;
+}
+
+footer {
+  padding: 4rem 0rem;
+}
+
+footer .footer-section {
+  margin-top: 0.5rem;
+}
+
+footer .footer-section p {
+  margin-top: 1rem;
+}
+
+footer .social-icon {
+  padding: 0rem 0.4rem;
+}
+
+footer .link-hover:hover, footer .link-hover:active {
+  color: #fd7e14 !important;
+}
+/*# sourceMappingURL=custom-styling.css.map */
