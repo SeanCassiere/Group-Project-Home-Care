@@ -1,9 +1,10 @@
 <div id="findAMaid" class="bodySection">
-  <div class="jumbotron" style="min-height: 300px;">    
+  <div class="jumbotron" style="min-height: 400px;">    
     <h2>Find a Maid</h2>
+    <br>
     <form id="maidSearchForm" action="./components/__maidSearcher.php" method="POST">
       <div class="form-row">
-        <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 offset-lg-1">
           <label for="findLocation">Where do you live?</label>
           <select id="findLocation" class="form-control selectpicker" data-style="btn-light">
             <option value="" disabled selected>Choose</option>
@@ -16,18 +17,16 @@
         <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4">
           <label for="findSkills">Skills</label>
           <select id="findSkills" class="form-control selectpicker" name="findSkills" data-style="btn-light" multiple>
-            <option value="Cooking"> Cooking</option>
-            <option value="Cleaning"> Cleaning</option>
-            <option value="Mopping"> Mopping</option>
-            <option value="Gardening"> Gardening</option>
+            <option value="cooking">Cooking</option>
+            <option value="cleaning">Cleaning</option>
+            <option value="washing">Washing</option>
+            <option value="daycare">Day Care</option>
+            <option value="gardening">Gardening</option>
           </select>
         </div>
-        <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4">
-          <label for="name2">Name 3</label>
-          <input type="text" class="form-control align-bottom" placeholder="Name 3" id="name3" style="border: none">
-        </div>
-        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <button class="btn btn-primary" type="submit">Search</button>
+        <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-2">
+          <label class="d-none d-xs-none d-sm-none d-md-block d-lg-block d-xl-block">Hit the <code>Search</code> button!</label>
+          <button class="btn btn-primary form-control" type="submit">Search</button>
         </div>
       </div>
     </form>
