@@ -9,9 +9,6 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <ul class="navbar-nav">
       <li class="nav-item"><a class="nav-link active" href="./index.php">Home <span class="sr-only">(current)</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="#findAMaid">Find a Maid</a></li>
-      <li class="nav-item"><a class="nav-link" href="#chatWithUs">Chat with Us</a></li>
-      <li class="nav-item"><a class="nav-link" href="#aboutUs">About Us</a></li>
     </ul>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item nav-link"><hr class="border-top" style="border-top: 1px solid rgba(0,0,0,0.1) !important; color: black;"></li>
