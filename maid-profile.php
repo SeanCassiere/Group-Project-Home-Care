@@ -1,27 +1,32 @@
 <?php
-// Initialize Variables
-
-//
+// Redirect to Home Page Function
 function goHome() { header( "Location: /" ); exit ; }
 
+// DB Connect
 require_once('./components/__connect_db.php');
 
+// Capture MaidID
 $URL_maidId = mysqli_real_escape_string($con ,$_GET['maidId']);
 
+// IF MaidID not given, go back home.
 if (!isset($URL_maidId)) {
   goHome();
 }
 
+// SQL Querying
 $sql = "SELECT m.*, s.* FROM Maid m INNER JOIN Skill s ON(m.maidID=s.maidId) WHERE (m.maidID=".$URL_maidId.")";
 $result = mysqli_query($con, $sql) or die ('Connection failed '.mysqli_error($con));
 
 if (mysqli_num_rows($result) > 0)
-{
+{ // Assign valid response into variables
   while ($row = mysqli_fetch_assoc($result))
   {
     $maid_name = $row['maidName'];
+    $maid_image = $row['maidProfileImage'];
+    $maid_address = $row['maidAddress'];
   }
-} else {
+} else 
+{ // Redirect back home
   goHome();
 }
 
@@ -67,9 +72,9 @@ if (isset($_SESSION["customer_loggedIn"])){
       <h2>Maid Profile</h2>
 
       <div class="row" style="margin-top: 1rem;">
-      <div class="offset-lg-1 col-xs-12 col-sm-12 col-md-6 col-lg-5">
-
+        <div class="offset-lg-1 col-xs-12 col-sm-12 col-md-6 col-lg-5">
           <div class="row">
+            
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="border: 1px solid green;">
               <h5>Name: <?php echo $maid_name; ?></h5>
             </div>
@@ -81,9 +86,11 @@ if (isset($_SESSION["customer_loggedIn"])){
         </div>
         
         <div class="offset-lg-1 col-xs-12 col-sm-12 col-md-6 col-lg-4" style="border: 1px solid red;">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores harum minima doloribus nesciunt aut illo, placeat voluptates laborum explicabo deserunt consequuntur cumque. Aliquid unde maiores corrupti magni blanditiis asperiores?</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores harum minima doloribus nesciunt aut illo, placeat voluptates laborum explicabo deserunt consequuntur cumque. Aliquid unde maiores corrupti magni blanditiis asperiores?</p>
+          <div style="position: relative; overflow: hidden; padding-bottom: 100%;">
+            <img src="./imgs/maids/<?php echo $maid_image; ?>" class="img-fluid full-width" style="position: absolute; max-width: 100%; max-height: 100%; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%);">
+          </div>
         </div>
+
       </div>
 
       <div class="row">
