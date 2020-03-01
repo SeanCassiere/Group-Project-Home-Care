@@ -1,6 +1,31 @@
 <?php
-$URL_maidId = $_GET['maidId'];
-//echo "$URL_maidId";
+// Initialize Variables
+
+//
+function goHome() { header( "Location: /" ); exit ; }
+
+require_once('./components/__connect_db.php');
+
+$URL_maidId = mysqli_real_escape_string($con ,$_GET['maidId']);
+
+if (!isset($URL_maidId)) {
+  goHome();
+}
+
+$sql = "SELECT m.*, s.* FROM Maid m INNER JOIN Skill s ON(m.maidID=s.maidId) WHERE (m.maidID=".$URL_maidId.")";
+$result = mysqli_query($con, $sql) or die ('Connection failed '.mysqli_error($con));
+
+if (mysqli_num_rows($result) > 0)
+{
+  while ($row = mysqli_fetch_assoc($result))
+  {
+    $maid_name = $row['maidName'];
+  }
+} else {
+  goHome();
+}
+
+mysqli_close($con);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,12 +60,50 @@ if (isset($_SESSION["customer_loggedIn"])){
 }
 ?>
 
-<div class="container" style="margin-top: 1rem; padding: 1rem 1rem;">
+<div class="container" style="margin-top: 1rem; padding: 0.5rem 1rem 1rem 1rem">
   <!-- Maid Profile Begins -->
-  <div class="bodySection">
-    <div class="jumbotron" style="height: 600px;">    
+  <div class="bodySection" style="margin-top: -3rem;">
+    <div class="jumbotron" style="min-height: 550px;">
       <h2>Maid Profile</h2>
-      <pre>Insert Chat-bot here</pre>
+
+      <div class="row" style="margin-top: 1rem;">
+      <div class="offset-lg-1 col-xs-12 col-sm-12 col-md-6 col-lg-5">
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="border: 1px solid green;">
+              <h5>Name: <?php echo $maid_name; ?></h5>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="border: 1px solid purple;">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime ea magni accusamus. Ut, rerum praesentium aliquid delectus molestiae aut beatae blanditiis! Eveniet odio, nisi atque consectetur suscipit deleniti accusamus praesentium.</p>
+            </div>
+
+          </div>
+        </div>
+        
+        <div class="offset-lg-1 col-xs-12 col-sm-12 col-md-6 col-lg-4" style="border: 1px solid red;">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores harum minima doloribus nesciunt aut illo, placeat voluptates laborum explicabo deserunt consequuntur cumque. Aliquid unde maiores corrupti magni blanditiis asperiores?</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores harum minima doloribus nesciunt aut illo, placeat voluptates laborum explicabo deserunt consequuntur cumque. Aliquid unde maiores corrupti magni blanditiis asperiores?</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores harum minima doloribus nesciunt aut illo, placeat voluptates laborum explicabo deserunt consequuntur cumque. Aliquid unde maiores corrupti magni blanditiis asperiores?</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores harum minima doloribus nesciunt aut illo, placeat voluptates laborum explicabo deserunt consequuntur cumque. Aliquid unde maiores corrupti magni blanditiis asperiores?</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores harum minima doloribus nesciunt aut illo, placeat voluptates laborum explicabo deserunt consequuntur cumque. Aliquid unde maiores corrupti magni blanditiis asperiores?</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores harum minima doloribus nesciunt aut illo, placeat voluptates laborum explicabo deserunt consequuntur cumque. Aliquid unde maiores corrupti magni blanditiis asperiores?</p>
+        </div>
+      </div>
+
     </div>
   </div>
 
