@@ -1,5 +1,4 @@
-
-<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #fd7e14">
+<nav class="navbar navbar-expand-xl navbar-light sticky-top" style="background-color: #fd7e14">
   <a class="navbar-brand" href="./index.php">
     <img src="./imgs/bootstrap-solid.svg" height="30" alt="" class="d-inline-block algin-top">
     HomeCare
