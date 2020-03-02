@@ -124,7 +124,7 @@ if (isset($_SESSION["customer_loggedIn"])){
           <div class="card" style="width: 100%; height: 100%;">
             <img src="./imgs/founders/FB_IMG_1494923112507.jpg" class="card-img-top">
             <div class="card-body">
-              <h5 class="text-orange">Jei Raju</h5>
+              <h5 class="text-orange">Jei Skandarajah</h5>
             </div>
           </div>
         </div>

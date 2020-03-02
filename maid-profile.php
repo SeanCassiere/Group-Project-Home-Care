@@ -24,6 +24,9 @@ if (mysqli_num_rows($result) > 0)
     $maid_name = $row['maidName'];
     $maid_image = $row['maidProfileImage'];
     $maid_address = $row['maidAddress'];
+    $maid_dob = $row['maidDOB'];
+    $maid_dailyRate = $row['maidServiceDailyRate'];
+    $maid_securityVerify = $row['maidSecurityDetails'];
   }
 } else 
 { // Redirect back home
@@ -38,7 +41,7 @@ mysqli_close($con);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php
-  echo "<title>Maid Profile</title>";
+  echo "<title>Maid Profile: $maid_name</title>";
   ?>
   <!-- Bootstrap Import -->
   <link rel="stylesheet" href="./css/bootstrap.css">
@@ -67,47 +70,52 @@ if (isset($_SESSION["customer_loggedIn"])){
 
 <div class="container" style="margin-top: 1rem; padding: 0.5rem 1rem 1rem 1rem">
   <!-- Maid Profile Begins -->
-  <div class="bodySection" style="margin-top: -3rem;">
-    <div class="jumbotron" style="min-height: 550px;">
+  <div class="bodySection">
+    <div class="jumbotron" style="margin-bottom: -3rem;">
       <h2>Maid Profile</h2>
-
-      <div class="row" style="margin-top: 1rem;">
-        <div class="offset-lg-1 col-xs-12 col-sm-12 col-md-6 col-lg-5">
+      <div class="row" style="margin-top: 2rem;">
+        <div class="offset-lg-1 col-xs-12 col-sm-12 col-md-6 col-lg-4">
+          <img src="./imgs/maids/<?php echo $maid_image; ?>" class="img-fluid mx-auto d-block">
+        </div>
+        <div class="offset-1 offset-sm-1 offset-md-0 offset-lg-0 col-xs-12 col-sm-12 col-md-5 col-lg-5 mt-4 mt-md-0 mt-lg-0">
           <div class="row">
-            
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="border: 1px solid green;">
-              <h5>Name: <?php echo $maid_name; ?></h5>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2 mt-1">
+              <h6>Name: <?php echo $maid_name; ?></h6>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="border: 1px solid purple;">
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime ea magni accusamus. Ut, rerum praesentium aliquid delectus molestiae aut beatae blanditiis! Eveniet odio, nisi atque consectetur suscipit deleniti accusamus praesentium.</p>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2 mt-1">
+              <h6>Date of Birth: <?php echo $maid_dob; ?></h6>
             </div>
-
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2 mt-1">
+              <h6>Daily Rate: <span class="text-danger">Rs. <?php echo $maid_dailyRate; ?></span></h6>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2 mt-1">
+              <h6>Security Documentation Verification: 
+              <?php
+                if ($maid_securityVerify==1) {
+                  echo "<i class='fas fa-user-check fa-lg text-success'></i>";
+                } else {
+                  echo "<i class='fas fa-user-slash fa-lg text-danger'></i>";
+                }
+              ?>
+              </h6>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2 mt-1">
+              <div class="text-center text-sm-center text-md-left text-lg-left mt-2 ml-2">
+                <button class="btn btn-primary btn-lg">BOOK NOW</button>
+              </div>
+            </div>
           </div>
         </div>
-        
-        <div class="offset-lg-1 col-xs-12 col-sm-12 col-md-6 col-lg-4" style="border: 1px solid red;">
-          <div style="position: relative; overflow: hidden; padding-bottom: 100%;">
-            <img src="./imgs/maids/<?php echo $maid_image; ?>" class="img-fluid full-width" style="position: absolute; max-width: 100%; max-height: 100%; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%);">
+      </div>
+    </div>
+
+    <div class="bodySection" style="margin-top: -3rem;">
+      <div class="jumbotron">
+        <h5>Skills</h5>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas pariatur, repellendus in beatae fugit eveniet explicabo. Optio esse eum dolorum nihil, iure, nulla repudiandae illum blanditiis suscipit inventore atque ab!</p>
           </div>
-        </div>
-
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores harum minima doloribus nesciunt aut illo, placeat voluptates laborum explicabo deserunt consequuntur cumque. Aliquid unde maiores corrupti magni blanditiis asperiores?</p>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores harum minima doloribus nesciunt aut illo, placeat voluptates laborum explicabo deserunt consequuntur cumque. Aliquid unde maiores corrupti magni blanditiis asperiores?</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores harum minima doloribus nesciunt aut illo, placeat voluptates laborum explicabo deserunt consequuntur cumque. Aliquid unde maiores corrupti magni blanditiis asperiores?</p>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores harum minima doloribus nesciunt aut illo, placeat voluptates laborum explicabo deserunt consequuntur cumque. Aliquid unde maiores corrupti magni blanditiis asperiores?</p>
         </div>
       </div>
     </div>
