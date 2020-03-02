@@ -70,13 +70,6 @@ if (isset($_SESSION["customer_loggedIn"])){
   }
   ?>
 
-  <div id="chatWithUs" class="bodySection">
-    <div class="jumbotron" style="height: 600px;">    
-      <h2>Chat with Us</h2>
-      <pre>Insert Chat-bot here</pre>
-    </div>
-  </div>
-
   <div id="aboutUs" class="bodySection">
     <div class="jumbotron"> <!--  style="height: 600px;" -->
       <h2>About Us</h2>
@@ -121,7 +114,7 @@ if (isset($_SESSION["customer_loggedIn"])){
         </div>
         <div class="col-6 col-sm-6 col-md-3 col-lg-3 mt-4">
           <div class="card" style="width: 100%; height: 100%;">
-            <img src="./imgs/founders/FB_IMG_1494923112507.jpg" class="card-img-top">
+            <img src="./imgs/founders/IMG_20190722_003551_635-compressor.jpg" class="card-img-top">
             <div class="card-body">
               <h5 class="text-orange">Shabbir Kutbuddin</h5>
             </div>

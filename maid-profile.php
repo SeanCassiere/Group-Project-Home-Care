@@ -110,7 +110,6 @@ if (isset($_SESSION["customer_loggedIn"])){
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil maiores harum minima doloribus nesciunt aut illo, placeat voluptates laborum explicabo deserunt consequuntur cumque. Aliquid unde maiores corrupti magni blanditiis asperiores?</p>
         </div>
       </div>
-
     </div>
   </div>
 
