@@ -27,6 +27,11 @@ if (mysqli_num_rows($result) > 0)
     $maid_dob = $row['maidDOB'];
     $maid_dailyRate = $row['maidServiceDailyRate'];
     $maid_securityVerify = $row['maidSecurityDetails'];
+    $maid_washing = $row['washing'];
+    $maid_cleaning = $row['cleaning'];
+    $maid_cooking = $row['cooking'];
+    $maid_dayCare = $row['dayCare'];
+    $maid_gardening = $row['gardening'];
   }
 } else 
 { // Redirect back home
@@ -70,26 +75,26 @@ if (isset($_SESSION["customer_loggedIn"])){
 
 <div class="container" style="margin-top: 1rem; padding: 0.5rem 1rem 1rem 1rem">
   <!-- Maid Profile Begins -->
-  <div class="bodySection">
+  <div class="bodySection" style="margin-top: -2rem;">
     <div class="jumbotron" style="margin-bottom: -3rem;">
       <h2>Maid Profile</h2>
       <div class="row" style="margin-top: 2rem;">
         <div class="offset-lg-1 col-xs-12 col-sm-12 col-md-6 col-lg-4">
           <img src="./imgs/maids/<?php echo $maid_image; ?>" class="img-fluid mx-auto d-block">
         </div>
-        <div class="offset-1 offset-sm-1 offset-md-0 offset-lg-0 col-xs-12 col-sm-12 col-md-5 col-lg-5 mt-4 mt-md-0 mt-lg-0">
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 mt-4 mt-md-0 mt-lg-0">
           <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2 mt-1">
+            <div class="offset-1 offset-sm-1 offset-md-0 offset-lg-0 col-xs-10 col-sm-10 col-md-12 col-lg-12 mt-2 mt-1">
               <h6>Name: <?php echo $maid_name; ?></h6>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2 mt-1">
+            <div class="offset-1 offset-sm-1 offset-md-0 offset-lg-0 col-xs-10 col-sm-10 col-md-12 col-lg-12 mt-2 mt-1">
               <h6>Date of Birth: <?php echo $maid_dob; ?></h6>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2 mt-1">
+            <div class="offset-1 offset-sm-1 offset-md-0 offset-lg-0 col-xs-10 col-sm-10 col-md-12 col-lg-12 mt-2 mt-1">
               <h6>Daily Rate: <span class="text-danger">Rs. <?php echo $maid_dailyRate; ?></span></h6>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2 mt-1">
-              <h6>Security Documentation Verification: 
+            <div class="offset-1 offset-sm-1 offset-md-0 offset-lg-0 col-xs-10 col-sm-10 col-md-12 col-lg-12 mt-2 mt-1">
+              <h6>Security Verification: 
               <?php
                 if ($maid_securityVerify==1) {
                   echo "<i class='fas fa-user-check fa-lg text-success'></i>";
@@ -109,13 +114,43 @@ if (isset($_SESSION["customer_loggedIn"])){
       </div>
     </div>
 
-    <div class="bodySection" style="margin-top: -3rem;">
+    <div class="bodySection">
       <div class="jumbotron">
-        <h5>Skills</h5>
+        <h3>Skills</h3>
+        <p>The skills and tasks that <?php echo $maid_name; ?> can do.</p>
         <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas pariatur, repellendus in beatae fugit eveniet explicabo. Optio esse eum dolorum nihil, iure, nulla repudiandae illum blanditiis suscipit inventore atque ab!</p>
-          </div>
+          <?php
+          if ($maid_washing==1) {
+            echo "<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 py-2'>";
+            echo "<hr><h6 class='text-orange ml-2'>Washing</h6>";
+            echo "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas pariatur, repellendus in beatae fugit eveniet explicabo. Optio esse eum dolorum nihil, iure, nulla repudiandae illum blanditiis suscipit inventore atque ab!</p>";
+            echo "</div>";
+          }
+          if ($maid_cleaning==1) {
+            echo "<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 py-2'>";
+            echo "<hr><h6 class='text-orange ml-2'>Cleaning</h6>";
+            echo "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas pariatur, repellendus in beatae fugit eveniet explicabo. Optio esse eum dolorum nihil, iure, nulla repudiandae illum blanditiis suscipit inventore atque ab!</p>";
+            echo "</div>";
+          }
+          if ($maid_cooking==1) {
+            echo "<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 py-2'>";
+            echo "<hr><h6 class='text-orange ml-2'>Cooking</h6>";
+            echo "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas pariatur, repellendus in beatae fugit eveniet explicabo. Optio esse eum dolorum nihil, iure, nulla repudiandae illum blanditiis suscipit inventore atque ab!</p>";
+            echo "</div>";
+          }
+          if ($maid_dayCare==1) {
+            echo "<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 py-2'>";
+            echo "<hr><h6 class='text-orange ml-2'>Day Care</h6>";
+            echo "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas pariatur, repellendus in beatae fugit eveniet explicabo. Optio esse eum dolorum nihil, iure, nulla repudiandae illum blanditiis suscipit inventore atque ab!</p>";
+            echo "</div>";
+          }
+          if ($maid_gardening==1) {
+            echo "<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 py-2'>";
+            echo "<hr><h6 class='text-orange ml-2'>Gardening</h6>";
+            echo "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas pariatur, repellendus in beatae fugit eveniet explicabo. Optio esse eum dolorum nihil, iure, nulla repudiandae illum blanditiis suscipit inventore atque ab!</p>";
+            echo "</div>";
+          }
+          ?>
         </div>
       </div>
     </div>
