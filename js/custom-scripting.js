@@ -91,6 +91,7 @@ $(document).ready( function(){
     });
   });
 
+
   $('#findSkills').selectpicker('setStyle', 'btn-light', 'remove');
   $('#findLocation').selectpicker('setStyle', 'btn-light', 'remove');
 });

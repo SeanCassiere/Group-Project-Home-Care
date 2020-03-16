@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="./css/custom-styling.css">
   <link rel="stylesheet" href="./css/glyphicons.css">
   <link rel="stylesheet" href="./css/bootstrap-select.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
 
@@ -140,7 +143,6 @@ if (isset($_SESSION["customer_loggedIn"])){
 
 <script src="https://kit.fontawesome.com/900629357e.js" crossorigin="anonymous"></script>
 <!-- Bootstrap Import -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/bootstrap-select.js"></script>
