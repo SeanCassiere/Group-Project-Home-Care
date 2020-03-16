@@ -38,7 +38,7 @@
         </div>
         <div class="form-group col-xs-12 col-sm-12 col-md-3 col-lg-4">
           <label for="amountRange">Maximum Price (per day): <code>LKR</code> Rs. <input type="number" name="amountInput" min="500" max="3000" value="1200" style="background-color: transparent; border: none;" readonly></label>
-          <input type="range" min="500" max="3000" step="100" value="1200" name="amountRange" id="amountRange" class="custom-range" oninput="this.form.amountInput.value=this.value">
+          <input type="range" min="500" max="3000" step="50" value="1200" name="amountRange" id="amountRange" class="custom-range" oninput="this.form.amountInput.value=this.value">
         </div>
         <div class="form-group col-xs-12 col-sm-12 col-md-3 col-lg-2">
           <label class="d-none d-xs-none d-sm-none d-md-block d-lg-block d-xl-block">Hit <code>Search</code> Button</label>
