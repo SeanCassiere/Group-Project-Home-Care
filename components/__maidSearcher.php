@@ -3,6 +3,8 @@ require_once('__connect_db.php');
 
 $location = mysqli_real_escape_string($con, $_POST['findLocation']);
 $tasks = $_POST['findSkills'];
+$startDate = $_POST['startDate'];
+$endDate = $_POST['endingDate'];
 
 $sql_query = "SELECT m.maidID, m.maidName, m.maidProfileImage FROM maid m INNER JOIN skill s ON m.maidID=s.maidId WHERE m.maidAddress LIKE '%";
 $sql_query .= $location;
@@ -27,7 +29,14 @@ if (mysqli_num_rows($search_tables) > 0) {
     echo "<div class='card-body'>";
     echo "<h5 class='card-title'>".$row['maidName']."</h5>";
     echo "<p class='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>";
-    echo "<a href='#' class='btn btn-primary stretched-link'>View Profile</a>";
+    echo "<a href='maid-profile.php?maidId=".$row['maidID'];
+    if ($startDate != "") {
+      echo "&startDate=".$startDate;
+    }
+    if ($endDate != "") {
+      echo "&endDate=".$endDate;
+    }
+    echo "' class='btn btn-primary stretched-link'>View Profile</a>";
     echo "</div>";
     echo "</div>";
 

@@ -30,7 +30,7 @@
       <div class="form-row">
         <div class="form-group col-xs-12 col-sm-12 col-md-3 col-lg-2 offset-lg-1">
           <label for="startDate">Pick Start Date</label>
-          <input type="text" id="startingDate" name="startDate" class="form-control">
+          <input type="text" id="startingDate" name="startDate" class="form-control" required>
         </div>
         <div class="form-group col-xs-12 col-sm-12 col-md-3 col-lg-2">
           <label for="startDate">Pick End Date</label>
