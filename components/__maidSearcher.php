@@ -5,6 +5,7 @@ $location = mysqli_real_escape_string($con, $_POST['findLocation']);
 $tasks = $_POST['findSkills'];
 $startDate = $_POST['startDate'];
 $endDate = $_POST['endingDate'];
+$maxPrice = $_POST['amountInput'];
 
 $sql_query = "SELECT m.maidID, m.maidName, m.maidProfileImage FROM maid m INNER JOIN skill s ON m.maidID=s.maidId WHERE m.maidAddress LIKE '%";
 $sql_query .= $location;
@@ -14,7 +15,7 @@ if (in_array("cleaning", $tasks)) { $sql_query .= " AND (s.cleaning=1)"; }
 if (in_array("cooking", $tasks)) { $sql_query .= " AND (s.cooking=1)"; }
 if (in_array("daycare", $tasks)) { $sql_query .= " AND (s.dayCare=1)"; }
 if (in_array("gardening", $tasks)) { $sql_query .= " AND (s.gardening=1)"; }
-$sql_query .= ";";
+$sql_query .= " AND m.maidServiceDailyRate<=".$maxPrice.";";
 
 $search_tables = mysqli_query($con, $sql_query) or die('Connection Failed: '.mysqli_error($con));
 
