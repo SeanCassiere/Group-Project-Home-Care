@@ -8,9 +8,9 @@
           <label for="findLocation">Where do you live?</label>
           <select id="findLocation" class="form-control selectpicker" data-style="btn-light" name="findLocation" required>
             <option value="Wellawatta">Wellawatta</option>
-            <option value="Kandy">Nugegoda</option>
+            <option value="Nugegoda">Nugegoda</option>
             <option value="Dehiwala">Dehiwala</option>
-            <option value="Panadura">Battaramulla</option>
+            <option value="Battaramulla">Battaramulla</option>
             <option value="Kotahena">Kotahena</option>
           </select>
         </div>
