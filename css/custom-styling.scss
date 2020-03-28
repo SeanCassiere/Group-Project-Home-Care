@@ -8,6 +8,16 @@ $orange : #fd7e14;
   color: $orange !important;
 }
 
+.bg-orange {
+  background-color: $orange !important;
+}
+
+.table .thead-orange th {
+  color: #fff;
+  background-color: $orange !important;
+  border-color: #ec6f08!important;
+}
+
 .navbar-expand-lg .navbar-nav .dropdown-menu {
   position: absolute !important;
   right: 0px !important;

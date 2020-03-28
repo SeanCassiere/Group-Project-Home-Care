@@ -6,6 +6,16 @@
   color: #fd7e14 !important;
 }
 
+.bg-orange {
+  background-color: #fd7e14 !important;
+}
+
+.table .thead-orange th {
+  color: #fff;
+  background-color: #fd7e14 !important;
+  border-color: #ec6f08 !important;
+}
+
 .navbar-expand-lg .navbar-nav .dropdown-menu {
   position: absolute !important;
   right: 0px !important;

@@ -25,7 +25,7 @@
           Account Settings
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target=".bd-example-modal-lg">View Bookings</a>
+          <!--<a class="dropdown-item" href="#" data-toggle="modal" data-target=".bd-example-modal-lg">View Bookings</a>-->
           <a class="dropdown-item" href="logout.php">Log Out</a>
         </div>
       </li>

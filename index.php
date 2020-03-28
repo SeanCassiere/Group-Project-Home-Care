@@ -70,6 +70,8 @@ if (isset($_SESSION["customer_loggedIn"])){
   <?php
   if (!isset($_SESSION['maid_loggedIn'])) {
     include('./components/__maidSearchUI.php');
+  } else {
+    include('./components/__bookings_maid_UI.php');
   }
   ?>
 
