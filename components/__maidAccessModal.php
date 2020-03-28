@@ -97,11 +97,9 @@
                   </div>
                   <select id="maidAddress" class="form-control selectpicker" name="maidAddress" data-style="btn-light" aria-describedby="inputGroupPrepend">
                     <option value="Wellawatta">Wellawatta</option>
-                    <option value="Hatton">Hatton</option>
-                    <option value="Kandy">Kandy</option>
+                    <option value="Kandy">Nugegoda</option>
                     <option value="Dehiwala">Dehiwala</option>
-                    <option value="Moratuwa">Moratuwa</option>
-                    <option value="Panadura">Panadura</option>
+                    <option value="Panadura">Battaramulla</option>
                     <option value="Kotahena">Kotahena</option>
                   </select>
                 </div>
