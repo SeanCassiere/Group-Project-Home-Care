@@ -101,7 +101,7 @@ $(document).ready( function(){
         data: form.serialize(),
       success: function(data)
       {
-        $("#makeBookingStatus").html(data);
+        $("#makeBooking").html(data);
       }
     });
   });
