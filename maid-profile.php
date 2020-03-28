@@ -107,7 +107,19 @@ if (isset($_SESSION["customer_loggedIn"])){
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-2 mt-1">
               <div class="text-center text-sm-center text-md-left text-lg-left mt-2 ml-2">
-                <button class="btn btn-primary btn-lg">BOOK NOW</button>
+                <?php
+                if (isset($_SESSION["customer_loggedIn"])) {
+                  echo "<form id='makeBooking' action='./components/__make_maid_booking.php' method='POST'>";
+                  echo "<input type='text' value='".$_GET['maidId']."' name='maidId' hidden readonly>";
+                  echo "<input type='text' value='".$_GET['startDate']."' name='date' hidden readonly>";
+                  echo "<input type='text' value='".$_SESSION['customer_userId']."' name='userId' hidden readonly>";
+                  echo "<button type='submit' class='btn btn-primary btn-lg'>BOOK NOW</button>";
+                  echo "</form>";
+                } else {
+                  echo "To make a booking you need to be logged in.";
+                }
+                ?>
+                <p id="makeBookingStatus"></p>
               </div>
             </div>
           </div>

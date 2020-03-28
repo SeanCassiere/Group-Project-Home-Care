@@ -91,6 +91,21 @@ $(document).ready( function(){
     });
   });
 
+  $("#makeBooking").submit(function(event) {
+    event.preventDefault(); // avoid to execute the actual submit of the form.
+    var form = $(this);
+    var url = form.attr('action');
+    $.ajax({
+      type: "POST",
+      url:  url,
+        data: form.serialize(),
+      success: function(data)
+      {
+        $("#makeBookingStatus").html(data);
+      }
+    });
+  });
+
 
   $('#findSkills').selectpicker('setStyle', 'btn-light', 'remove');
   $('#findLocation').selectpicker('setStyle', 'btn-light', 'remove');

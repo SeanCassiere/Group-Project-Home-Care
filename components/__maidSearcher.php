@@ -30,7 +30,7 @@ if (mysqli_num_rows($search_tables) > 0) {
     echo "<div class='card-body'>";
     echo "<h5 class='card-title'>".$row['maidName']."</h5>";
     echo "<p class='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>";
-    echo "<a href='maid-profile.php?maidId=".$row['maidID']."&date=".$startDate;
+    echo "<a href='maid-profile.php?maidId=".$row['maidID'];
     if ($startDate != "") {
       echo "&startDate=".$startDate;
     }
