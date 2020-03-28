@@ -37,7 +37,7 @@
           <input type="text" id="endingDate" name="endingDate" class="form-control">
         </div>
         <div class="form-group col-xs-12 col-sm-12 col-md-3 col-lg-4">
-          <label for="amountRange">Maximum Price (per day): <code>LKR</code> Rs. <input type="number" name="amountInput" min="500" max="3000" value="1200" style="background-color: transparent; border: none;" readonly></label>
+          <label for="amountRange">Maximum Price (per day): <code>LKR</code> Rs. <input type="text" name="amountInput" min="500" max="3000" value="1200" style="background-color: transparent; border: none;" readonly></label>
           <input type="range" min="500" max="3000" step="50" value="1200" name="amountRange" id="amountRange" class="custom-range" oninput="this.form.amountInput.value=this.value">
         </div>
         <div class="form-group col-xs-12 col-sm-12 col-md-3 col-lg-2">
@@ -52,9 +52,9 @@
 </div>
 <script>
   $('#startingDate').datepicker({
-    dateFormat: 'dd-mm-yy'
+    dateFormat: 'yy-mm-dd'
   });
   $('#endingDate').datepicker({
-    dateFormat: 'dd-mm-yy'
+    dateFormat: 'yy-mm-dd'
   });
 </script>

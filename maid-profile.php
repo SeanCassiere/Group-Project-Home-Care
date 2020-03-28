@@ -66,7 +66,6 @@ if (isset($_SESSION["customer_loggedIn"])){
   include('./components/__userChangeDetailsModal.php');
 } else if (isset($_SESSION["maid_loggedIn"])) {
   include('./components/__navbar_normal_maid_logged_in.php');
-  // include a view  bookings modal
 } else
 {
   include('./components/__navbar_normal_logged_out.php');

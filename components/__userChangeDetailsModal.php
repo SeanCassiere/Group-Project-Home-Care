@@ -1,8 +1,9 @@
 <?php
-require_once('./components/__connect_db.php');
-$userDetailSQL = "SELECT userId, userPassword, userName, userPhone, userEmail FROM users WHERE userEmail='".$_SESSION["customer_userEmail"]."';";
-$userDetailQueryReturn = mysqli_query($con, $userDetailSQL);
-$loggedUser = mysqli_fetch_assoc($userDetailQueryReturn);
+require('__connect_db.php');
+$sql = "SELECT userId, userPassword, userName, userPhone, userEmail FROM users";
+$sql .= " WHERE userEmail='".$_SESSION['customer_userEmail']."';";
+$result = mysqli_query($con, $sql);
+$loggedUser = mysqli_fetch_assoc($result);
 ?>
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
