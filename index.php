@@ -170,7 +170,7 @@ if (isset($_SESSION["customer_loggedIn"])){
 
 <?php include('./components/__footer.php'); ?>
 
-<script src="https://kit.fontawesome.com/900629357e.js" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-replace-svg></script>
 <!-- Bootstrap Import -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="./js/bootstrap.min.js"></script>

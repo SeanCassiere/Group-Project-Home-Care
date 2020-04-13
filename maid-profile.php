@@ -163,31 +163,31 @@ if (isset($_SESSION["customer_loggedIn"])){
           if ($maid_washing==1) {
             echo "<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 py-2'>";
             echo "<hr><h6 class='text-orange ml-2'>Washing</h6>";
-            echo "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas pariatur, repellendus in beatae fugit eveniet explicabo. Optio esse eum dolorum nihil, iure, nulla repudiandae illum blanditiis suscipit inventore atque ab!</p>";
+            echo "<p>The Washing service provided by our housemaids would include washing clothes, drying them and neatly fold the clothes once they are dried. It would also include ironing certain dresses if required.</p>";
             echo "</div>";
           }
           if ($maid_cleaning==1) {
             echo "<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 py-2'>";
             echo "<hr><h6 class='text-orange ml-2'>Cleaning</h6>";
-            echo "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas pariatur, repellendus in beatae fugit eveniet explicabo. Optio esse eum dolorum nihil, iure, nulla repudiandae illum blanditiis suscipit inventore atque ab!</p>";
+            echo "<p>The Cleaning service provided by our housemaids would include sweeping and mopping the house to keep it clean and tidy. It would also include other cleaning services such as dusting and keeping different things in the house clean and kept in their proper places.</p>";
             echo "</div>";
           }
           if ($maid_cooking==1) {
             echo "<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 py-2'>";
             echo "<hr><h6 class='text-orange ml-2'>Cooking</h6>";
-            echo "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas pariatur, repellendus in beatae fugit eveniet explicabo. Optio esse eum dolorum nihil, iure, nulla repudiandae illum blanditiis suscipit inventore atque ab!</p>";
+            echo "<p>The Cooking service provided by our housemaids would include preparing various dishes of curry, cooking rice/other meals and other SriLankan cuisine delicacies which the maid have experience in preparing. The maid could also be booked as an assistant to help in cooking daily meals or other dishes.</p>";
             echo "</div>";
           }
           if ($maid_dayCare==1) {
             echo "<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 py-2'>";
             echo "<hr><h6 class='text-orange ml-2'>Day Care</h6>";
-            echo "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas pariatur, repellendus in beatae fugit eveniet explicabo. Optio esse eum dolorum nihil, iure, nulla repudiandae illum blanditiis suscipit inventore atque ab!</p>";
+            echo "<p>The DayCare service provided by our housemaids would include taking care of small kids when their parents are away from home and if there is no one to attend to the little kids. The maid would be able to ensure that the little kids left under the observation of the maid are safe and would also be able to ensure that the little kids would have their meals on time and would be able to wash and clean little infants and ensure that they are well attended.</p>";
             echo "</div>";
           }
           if ($maid_gardening==1) {
             echo "<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 py-2'>";
             echo "<hr><h6 class='text-orange ml-2'>Gardening</h6>";
-            echo "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas pariatur, repellendus in beatae fugit eveniet explicabo. Optio esse eum dolorum nihil, iure, nulla repudiandae illum blanditiis suscipit inventore atque ab!</p>";
+            echo "<p>The Gardening service provided by our housemaids would mean that the maid would be able to work in the garden, growing and taking care of the plants and keeping it attractive. The maid would be able to clean and keep the garden neat and tidy as well.</p>";
             echo "</div>";
           }
           ?>
