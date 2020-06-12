@@ -8,6 +8,14 @@ $orange : #fd7e14;
   color: $orange !important;
 }
 
+.text-bold {
+  font-weight: bold;
+}
+
+.text-danger-small-font {
+  font-size: 0.8rem;
+}
+
 .bg-orange {
   background-color: $orange !important;
 }

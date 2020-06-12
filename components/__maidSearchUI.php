@@ -15,8 +15,8 @@
           </select>
         </div>
         <div class="form-group col-xs-12 col-sm-12 col-md-8 col-lg-7">
-          <label for="findSkills">What tasks do you need done?</label>
-          <select id="findSkills" class="form-control selectpicker" name="findSkills[]" data-style="btn-light" multiple required>
+          <label for="findSkills">What tasks do you need done? <span class="text-danger text-bold text-danger-small-font">(Select Multiple)</span></label>
+          <select id="findSkills" class="form-control selectpicker show-tick" name="findSkills[]" data-style="btn-light" data-actions-box="true" multiple required>
             <option value="cooking">Cooking</option>
             <option value="cleaning">Cleaning</option>
             <option value="washing">Washing</option>
