@@ -14,7 +14,7 @@ if (!isset($URL_maidId)) {
 }
 
 // SQL Querying
-$sql = "SELECT m.*, s.* FROM Maid m INNER JOIN Skill s ON(m.maidID=s.maidId) WHERE (m.maidID=".$URL_maidId.")";
+$sql = "SELECT m.*, s.* FROM maid m INNER JOIN skill s ON(m.maidID=s.maidId) WHERE (m.maidID=".$URL_maidId.")";
 $result = mysqli_query($con, $sql) or die ('Connection failed '.mysqli_error($con));
 
 if (mysqli_num_rows($result) > 0)
