@@ -17,6 +17,7 @@ if (mysqli_num_rows($query) > 0) {
       $_SESSION["maid_loggedIn"] = true;
       $_SESSION["maid_userName"] = $row["maidName"];
       $_SESSION["maid_userEmail"] = $row["maidEmail"];
+      $_SESSION["maid_Id"] = $row["maidID"];
       echo "Log In Successful, <a href='./index.php' focus>click here to reload.</a>";
     } else {
       echo "Password is incorrect.";

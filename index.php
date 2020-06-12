@@ -9,8 +9,38 @@
   <link rel="stylesheet" href="./css/custom-styling.css">
   <link rel="stylesheet" href="./css/glyphicons.css">
   <link rel="stylesheet" href="./css/bootstrap-select.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+window.fbAsyncInit = function() {
+  FB.init({
+    xfbml            : true,
+    version          : 'v6.0'
+  });
+};
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=install_email
+  page_id="111823250421038"
+  theme_color="#ff7e29"
+    logged_in_greeting="Welcome to HomeCare! How could I help you today?"
+    logged_out_greeting="Welcome to HomeCare! How could I help you today?">
+</div>
 
 <?php
 session_start();
@@ -67,15 +97,10 @@ if (isset($_SESSION["customer_loggedIn"])){
   <?php
   if (!isset($_SESSION['maid_loggedIn'])) {
     include('./components/__maidSearchUI.php');
+  } else {
+    include('./components/__bookings_maid_UI.php');
   }
   ?>
-
-  <div id="chatWithUs" class="bodySection">
-    <div class="jumbotron" style="height: 600px;">    
-      <h2>Chat with Us</h2>
-      <pre>Insert Chat-bot here</pre>
-    </div>
-  </div>
 
   <div id="aboutUs" class="bodySection">
     <div class="jumbotron"> <!--  style="height: 600px;" -->
@@ -113,7 +138,7 @@ if (isset($_SESSION["customer_loggedIn"])){
         </div>
         <div class="col-6 col-sm-6 col-md-3 col-lg-3 mt-4">
           <div class="card" style="width: 100%; height: 100%;">
-            <img src="./imgs/founders/FB_IMG_1494923112507.jpg" class="card-img-top">
+            <img src="./imgs/founders/20200302_100335.jpg" class="card-img-top">
             <div class="card-body">
               <h5 class="text-orange">Abdullah Fahim</h5>
             </div>
@@ -121,7 +146,7 @@ if (isset($_SESSION["customer_loggedIn"])){
         </div>
         <div class="col-6 col-sm-6 col-md-3 col-lg-3 mt-4">
           <div class="card" style="width: 100%; height: 100%;">
-            <img src="./imgs/founders/FB_IMG_1494923112507.jpg" class="card-img-top">
+            <img src="./imgs/founders/IMG_20190722_003551_635-compressor.jpg" class="card-img-top">
             <div class="card-body">
               <h5 class="text-orange">Shabbir Kutbuddin</h5>
             </div>
@@ -129,9 +154,9 @@ if (isset($_SESSION["customer_loggedIn"])){
         </div>
         <div class="col-6 col-sm-6 col-md-3 col-lg-3 mt-4">
           <div class="card" style="width: 100%; height: 100%;">
-            <img src="./imgs/founders/FB_IMG_1494923112507.jpg" class="card-img-top">
+            <img src="./imgs/founders/IMG-20161113-WA0019.jpg" class="card-img-top">
             <div class="card-body">
-              <h5 class="text-orange">Jei Raju</h5>
+              <h5 class="text-orange">Jei Skandarajah</h5>
             </div>
           </div>
         </div>
@@ -145,9 +170,8 @@ if (isset($_SESSION["customer_loggedIn"])){
 
 <?php include('./components/__footer.php'); ?>
 
-<script src="https://kit.fontawesome.com/900629357e.js" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" data-auto-replace-svg></script>
 <!-- Bootstrap Import -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/bootstrap-select.js"></script>

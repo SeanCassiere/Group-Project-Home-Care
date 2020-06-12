@@ -10,7 +10,7 @@
     <ul class="navbar-nav">
       <li class="nav-item"><a class="nav-link active" href="./index.php">Home <span class="sr-only">(current)</span></a></li>
       <li class="nav-item"><a class="nav-link" href="#findAMaid">Find a Maid</a></li>
-      <li class="nav-item"><a class="nav-link" href="#chatWithUs">Chat with Us</a></li>
+      <!--<li class="nav-item"><a class="nav-link" href="#chatWithUs">Chat with Us</a></li>-->
       <li class="nav-item"><a class="nav-link" href="#aboutUs">About Us</a></li>
     </ul>
     <ul class="navbar-nav ml-auto">
@@ -25,7 +25,7 @@
           Account Settings
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target=".bd-example-modal-lg">View Bookings</a>
+          <!--<a class="dropdown-item" href="#" data-toggle="modal" data-target=".bd-example-modal-lg">View Bookings</a>-->
           <a class="dropdown-item" href="logout.php">Log Out</a>
         </div>
       </li>

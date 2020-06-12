@@ -96,13 +96,11 @@
                     <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-phone-alt"></i></span>
                   </div>
                   <select id="maidAddress" class="form-control selectpicker" name="maidAddress" data-style="btn-light" aria-describedby="inputGroupPrepend">
-                    <option value="Wellawatta">Wellawatta</option>
-                    <option value="Hatton">Hatton</option>
-                    <option value="Kandy">Kandy</option>
-                    <option value="Dehiwala">Dehiwala</option>
-                    <option value="Moratuwa">Moratuwa</option>
-                    <option value="Panadura">Panadura</option>
-                    <option value="Kotahena">Kotahena</option>
+                  <option value="Wellawatta">Wellawatta</option>
+                  <option value="Nugegoda">Nugegoda</option>
+                  <option value="Dehiwala">Dehiwala</option>
+                  <option value="Battaramulla">Battaramulla</option>
+                  <option value="Kotahena">Kotahena</option>
                   </select>
                 </div>
                 <br> <!-- line break -->
