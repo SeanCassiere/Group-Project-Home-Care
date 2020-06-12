@@ -1,6 +1,6 @@
 <div id="findAMaid" class="bodySection">
   <div class="jumbotron" style="min-height: 400px;">    
-    <h2>Let's find you a Maid</h2>
+    <h2>Let's find you a House Maid</h2>
     <br>
     <form id="maidSearchForm" action="./components/__maidSearcher.php" method="POST">
       <div class="form-row">
