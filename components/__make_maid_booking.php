@@ -14,7 +14,7 @@ $sql .= "');";
 $result = mysqli_query($con, $sql);
 
 if ($result) {
-  echo "Your booking was made successfully.";
+  echo "Your booking was made successfully. Further details will be emailed to you.";
 } else {
   echo "There was an error, ".mysqli_error($result);
 }
